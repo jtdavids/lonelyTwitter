@@ -13,6 +13,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -54,7 +55,10 @@ public class LonelyTwitterActivity extends Activity {
 			}
 		});
 	}
-
+	public void viewSavedContent(View view){
+		Intent intent = new Intent(view.getContext(), LookAtSavedContents.class);
+		startActivity(intent);
+	}
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
